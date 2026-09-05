@@ -103,4 +103,53 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+
+    // 5. Udostępnianie wizytówki (Web Share API + fallback do kopiowania linku)
+    const shareBtns = document.querySelectorAll('.share-card-btn');
+    shareBtns.forEach(btn => {
+        btn.addEventListener('click', function () {
+            const shareData = {
+                title: 'Mariusz Butrymowicz – Usługi Remontowo-Budowlane',
+                text: 'Mariusz Butrymowicz – Usługi Remontowo-Budowlane | Wykończenia Wnętrz od A do Z. Tel: 799 012 391',
+                url: window.location.href
+            };
+
+            if (navigator.share) {
+                navigator.share(shareData).catch((err) => {
+                    if (err.name !== 'AbortError') {
+                        copyShareLink();
+                    }
+                });
+            } else {
+                copyShareLink();
+            }
+        });
+    });
+
+    function copyShareLink() {
+        const link = window.location.href;
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(link).then(() => {
+                showToast('Skopiowano link do wizytówki!');
+            }).catch(() => {
+                fallbackCopyLink(link);
+            });
+        } else {
+            fallbackCopyLink(link);
+        }
+    }
+
+    function fallbackCopyLink(text) {
+        const tempInput = document.createElement('input');
+        tempInput.value = text;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        try {
+            document.execCommand('copy');
+            showToast('Skopiowano link do wizytówki!');
+        } catch (err) {
+            showToast('Nie udało się skopiować linku');
+        }
+        document.body.removeChild(tempInput);
+    }
 });

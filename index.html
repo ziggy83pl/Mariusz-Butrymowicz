@@ -48,6 +48,10 @@
                     <i class="fab fa-whatsapp"></i>
                     <span>WhatsApp</span>
                 </a>
+                <button type="button" class="btn-header btn-share share-card-btn" title="Udostępnij wizytówkę">
+                    <i class="fas fa-share-alt"></i>
+                    <span>Udostępnij</span>
+                </button>
             </div>
         </div>
     </header>
@@ -82,6 +86,10 @@
                             <button type="button" class="btn btn-secondary copy-phone-btn" data-phone="799012391" title="Kopiuj numer telefonu">
                                 <i class="far fa-copy"></i>
                                 <span class="copy-text">Kopiuj nr</span>
+                            </button>
+                            <button type="button" class="btn btn-secondary share-card-btn" title="Udostępnij wizytówkę">
+                                <i class="fas fa-share-alt"></i>
+                                <span class="share-text">Udostępnij</span>
                             </button>
                         </div>
 
@@ -330,6 +338,27 @@
                 </div>
 
                 <div class="gallery-grid">
+                    <div class="gallery-item" data-src="lazenka1.jpg">
+                        <img src="lazenka1.jpg" alt="Remont łazienki - płytki i glazura" loading="lazy">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>Powiększ zdjęcie</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-src="lazenka2.jpg">
+                        <img src="lazenka2.jpg" alt="Wykończenie łazienki - montaż armatury" loading="lazy">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>Powiększ zdjęcie</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-src="lazenka3.jpg">
+                        <img src="lazenka3.jpg" alt="Nowoczesna łazienka - kompleksowa realizacja" loading="lazy">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>Powiększ zdjęcie</span>
+                        </div>
+                    </div>
                     <div class="gallery-item" data-src="20251128_130545.jpg">
                         <img src="20251128_130545.jpg" alt="Wykończenie wnętrz - realizacja" loading="lazy">
                         <div class="gallery-overlay">
@@ -465,9 +494,13 @@
             <div class="footer-contact">
                 <a href="tel:+48799012391"><i class="fas fa-phone-alt"></i> 799 012 391</a>
                 <a href="https://wa.me/48799012391" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <button type="button" class="footer-share-btn share-card-btn" title="Udostępnij wizytówkę">
+                    <i class="fas fa-share-alt"></i> Udostępnij
+                </button>
             </div>
             <div class="footer-copy">
-                &copy; <span id="currentYear"></span> Wszelkie prawa zastrzeżone.
+                <p>&copy; <span id="currentYear"></span> Wszelkie prawa zastrzeżone.</p>
+                <p>Realizacja: <a href="https://wizytowka-online.pages.dev/" target="_blank" rel="noopener noreferrer" id="version-text" class="logo-tooltip" data-tooltip="Zamów profesjonalną stronę WWW" data-interval-id="299"><span class="">E</span><span class="">n</span><span class="">t</span><span class="">e</span><span class="">r</span><span class="">p</span><span class="">r</span><span class="">i</span><span class="">s</span><span class="">e</span></a></p>
             </div>
         </div>
     </footer>
@@ -482,6 +515,9 @@
             <i class="fab fa-whatsapp"></i>
             <span>WhatsApp</span>
         </a>
+        <button type="button" class="sticky-btn sticky-share share-card-btn" title="Udostępnij wizytówkę" aria-label="Udostępnij wizytówkę">
+            <i class="fas fa-share-alt"></i>
+        </button>
     </div>
 
     <!-- Lightbox Modal do przeglądania zdjęć -->

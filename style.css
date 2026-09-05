@@ -219,6 +219,21 @@ body {
     transform: translateY(-1px);
 }
 
+.btn-header.btn-share {
+    background: #f1f5f9;
+    color: #0f172a;
+    border: 1px solid #cbd5e1;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.btn-header.btn-share:hover {
+    background: #e2e8f0;
+    border-color: #ca8a04;
+    color: #ca8a04;
+    transform: translateY(-1px);
+}
+
 /* ==========================================================================
    Hero Section / Wizytówka
    ========================================================================== */
@@ -1030,13 +1045,52 @@ body {
     color: #facc15;
 }
 
+.footer-share-btn {
+    background: transparent;
+    border: none;
+    color: #cbd5e1;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: var(--transition-smooth);
+    padding: 0;
+}
+
+.footer-share-btn:hover {
+    color: #facc15;
+}
+
 .footer-copy {
-    font-size: 0.8rem;
-    color: #64748b;
+    font-size: 0.95rem;
+    color: #94a3b8;
     width: 100%;
-    text-align: center;
     padding-top: 20px;
     border-top: 1px solid #1e293b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer-copy p {
+    margin: 0;
+}
+
+.footer-copy a {
+    color: #facc15;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition-smooth);
+    display: inline-block;
+}
+
+.footer-copy a:hover {
+    color: #ffffff;
+    text-decoration: none;
 }
 
 /* Sekcja Global Trusted Logos w stopce */
@@ -1073,6 +1127,7 @@ body {
     z-index: 999;
     box-shadow: 0 -8px 25px rgba(15, 23, 42, 0.08);
     gap: 12px;
+    align-items: center;
 }
 
 .sticky-btn {
@@ -1096,6 +1151,29 @@ body {
 .sticky-wa {
     background: var(--whatsapp-green);
     color: #ffffff;
+}
+
+.sticky-share {
+    flex: 0 0 46px;
+    width: 46px;
+    height: 46px;
+    padding: 0;
+    border-radius: 50%;
+    background: #0f172a;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    transition: var(--transition-smooth);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+}
+
+.sticky-share:hover {
+    background: #1e293b;
+    transform: scale(1.05);
 }
 
 /* ==========================================================================
@@ -1262,5 +1340,13 @@ body {
 
     .footer-contact {
         justify-content: center;
+    }
+
+    .footer-copy {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 8px;
+        font-size: 0.85rem;
     }
 }
